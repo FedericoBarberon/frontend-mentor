@@ -1,0 +1,127 @@
+:root {
+  // ----Colors----
+
+  // Primry
+  --color-sedans: hsl(31, 77%, 52%);
+  --color-suvs: hsl(184, 100%, 22%);
+  --color-luxury: hsl(179, 100%, 13%);
+
+  // Neutral
+  --white: hsl(0, 0%, 95%);
+  --gray: hsla(0, 0%, 100%, 0.75);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  background-color: var(--white);
+  padding-block: 60px;
+}
+
+.cards-container {
+  display: flex;
+  flex-direction: column;
+  width: min(90%, 900px);
+  min-height: 475px;
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    padding: 50px;    
+
+    &.sedans {
+      background-color: var(--color-sedans);
+      border-radius: 8px 8px 0 0;
+
+      button {
+        color: var(--color-sedans);
+      }
+    }
+
+    &.suvs {
+      background-color: var(--color-suvs);
+
+      button {
+        color: var(--color-suvs);
+      }
+    }
+
+    &.luxury {
+      background-color: var(--color-luxury);
+      border-radius: 0 0 8px 8px;
+
+      button {
+        color: var(--color-luxury);
+      }
+    }
+
+    img {
+      width: 50px;
+    }
+
+    h2 {
+      font-family: 'Big Shoulders Display', cursive;
+      font-weight: 700;
+      font-size: 32px;
+      text-transform: uppercase;
+      color: var(--white);
+    }
+
+    p {
+      font-family: 'Lexend Deca', sans-serif;
+      font-weight: 400;
+      font-size: 15px;
+      color: var(--gray);
+      line-height: 1.7;
+      flex-grow: 1;
+    }
+
+    button {
+      background-color: var(--white);
+      border: 2px solid var(--white);
+      border-radius: 30px;
+      width: fit-content;
+      padding: 10px 25px;
+      font-family: 'Lexend Deca', sans-serif;
+      font-size: 16px;
+      cursor: pointer;
+      user-select: none;
+      transition: background-color .1s, color .1s, filter .2s;
+
+      &:hover {
+        filter: brightness(95%);
+      }
+
+      &:active {
+        background-color: transparent;
+        color: var(--white);
+      }
+
+      @media (pointer: coarse) {
+        cursor: default;
+      }
+    }
+  }
+
+  @media (min-width: 850px) {
+    flex-direction: row;
+
+    .card {
+      &.sedans {
+        border-radius: 8px 0 0 8px;
+      }
+
+      &.luxury {
+        border-radius: 0 8px 8px 0;
+      }
+    }
+  }
+}
