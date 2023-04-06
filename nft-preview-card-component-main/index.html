@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <title>Frontend Mentor | NFT preview card component</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            white: 'hsl(0, 0%, 100%)',
+            mainBg: 'hsl(217, 54%, 11%)',
+            cardBg: 'hsl(216, 50%, 16%)',
+            secondary: 'hsl(215, 51%, 70%)',
+            cyan: 'hsl(178, 100%, 50%)',
+            line: 'hsl(215, 32%, 27%)'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+
+<body class="min-h-screen bg-mainBg text-white grid place-items-center">
+  <article class="font-['Outfit'] bg-cardBg w-[90%] max-w-[380px] p-6 rounded-[20px] flex flex-col gap-4 shadow">
+    <div class="relative grid place-items-center cursor-pointer group">
+      <img src="./images/image-equilibrium.jpg" alt="Equilibrium image" class="rounded-[15px]">
+      <div
+        class="w-full h-full grid place-items-center bg-cyan rounded-[15px] bg-opacity-60 absolute opacity-0 group-hover:opacity-100 transition">
+        <img src="images/icon-view.svg" alt="Eye icon">
+      </div>
+    </div>
+
+    <a href="#" class="font-bold text-2xl transition-colors hover:text-cyan hover:transition-colors">Equilibrium
+      #3429</a>
+
+    <p class="text-secondary font-light text-lg">Our Equilibrium collection promotes balance and calm.</p>
+
+    <div class="flex justify-between">
+      <span class="flex gap-2 text-cyan font-semibold items-center text-lg">
+        <img src="images/icon-ethereum.svg" alt="ethereum icon">
+        0.041 ETH
+      </span>
+
+      <span class="flex gap-2 font-light text-secondary items-center text-lg">
+        <img src="images/icon-clock.svg" alt="clock icon">
+        3 days left
+      </span>
+    </div>
+
+    <hr class="h-px bg-line border-0">
+
+    <footer class="flex items-center gap-4">
+      <img src="images/image-avatar.png" alt="Jules Wyvern avatar" class="w-8 border-2 rounded-full">
+      <span class="text-secondary font-light">Creation of <a href="#"
+          class="text-white transition-colors hover:text-cyan hover:transition-colors">Jules
+          Wyvern</a></span>
+    </footer>
+  </article>
+</body>
+
+</html>
