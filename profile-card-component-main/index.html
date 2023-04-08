@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+  <title>Frontend Mentor | Profile card component</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="dist/styles.css">
+</head>
+
+<body
+  class="relative h-screen overflow-hidden grid place-items-center bg-cyan bg-[url('../images/bg-pattern-top.svg'),url('../images/bg-pattern-bottom.svg')] bg-no-repeat bg-[position:top_-600px_left_-750px,_bottom_-620px_right_-730px] sm:bg-[position:top_-600px_left_-600px,_bottom_-620px_right_-600px] md:bg-[position:top_-600px_left_-500px,_bottom_-620px_right_-500px] lg:bg-[position:top_-600px_left_-400px,_bottom_-620px_right_-400px] xl:bg-[position:top_-500px_left_-280px,_bottom_-612px_right_-260px]">
+  <article class="w-[90%] max-w-[350px] bg-white rounded-xl overflow-hidden z-10">
+    <header class="relative mb-12">
+      <img src="images/bg-pattern-card.svg" alt="card-bg-pattern">
+      <img src="images/image-victor.jpg" alt="avatar picture"
+        class="rounded-full border-4 border-white absolute bottom-0 left-[50%] -translate-x-1/2 translate-y-1/2">
+    </header>
+
+    <section class="flex flex-col items-center py-6">
+      <div class="flex gap-2">
+        <h1 class="text-lg text-darkBlue font-bold">Victor Crest</h1>
+        <span class="text-lg text-gray">26</span>
+      </div>
+      <span class="text-gray">London</span>
+    </section>
+
+    <hr class="border-0 bg-gray bg-opacity-30 h-[.5px]">
+
+    <footer class="py-6 px-11 flex justify-between">
+      <div class="flex flex-col items-center">
+        <strong class="text-lg text-darkBlue">80K</strong>
+        <p class="text-gray text-xs tracking-[1px]">Followers</p>
+      </div>
+      <div class="flex flex-col items-center">
+        <strong class="text-lg text-darkBlue">803K</strong>
+        <p class="text-gray text-xs tracking-[1px]">Likes</p>
+      </div>
+      <div class="flex flex-col items-center">
+        <strong class="text-lg text-darkBlue">1.4K</strong>
+        <p class="text-gray text-xs tracking-[1px]">Photos</p>
+      </div>
+    </footer>
+  </article>
+</body>
+
+</html>
